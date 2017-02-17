@@ -20,5 +20,7 @@ while True:
           break
       elif comando == 'X':
       	print('Yee que apsa oscio')
+      elif comando == 'R':
+      	print('Pues me paro')
 
 #arduino.close() #Finalizamos la comunicacion
