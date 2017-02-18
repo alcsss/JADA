@@ -25,6 +25,9 @@ int seleccionarMarcha(char marcha)
   int v = 0;
   switch(marcha)
   {
+    case '0':
+        v = 0;
+        break;
     case '1':
         v = 50;
         break;        
@@ -71,10 +74,12 @@ void loop() {
         ordenMotores(RELEASE);
         break;
       case 'd':
+        velocidadMotores(100);
         ordenMotores(FORWARD);
         delay(5000);
         ordenMotores(RELEASE);
         delay(2000);
+        velocidadMotores(255);
         ordenMotores(BACKWARD);
         delay(5000);
         ordenMotores(RELEASE);
@@ -87,7 +92,7 @@ void loop() {
         velocidad = (int)Serial.read();
         velocidadMotores(velocidad);
         */
-         marcha = Serial.read();
+         marcha = Serial.read(); //@FIXME consigo que leea otra vez el dato para cambiar de marcha, no se si es por culpa del python o del sketch
          velocidad = seleccionarMarcha(marcha);
          velocidadMotores(velocidad);
       default:
