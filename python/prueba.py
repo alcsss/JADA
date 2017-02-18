@@ -2,7 +2,7 @@ import serial
 
 arduino = serial.Serial('/dev/ttyUSB0', 9600)
 
-print("Starting! A (Adelante), B (Atras), C (Close), D (Adelante y atras) y R (Parar)")
+print("Starting! a (Adelante), b (Atras), c (Close), d (Adelante y atras), r (Parar) y v (Marcha: 0, 1, 2, 3, 4, 5)")
 
 #comando
 while True:

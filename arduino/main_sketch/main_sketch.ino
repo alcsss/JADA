@@ -20,6 +20,31 @@ void velocidadMotores(int velocidad)
   MotorTD.setSpeed(velocidad);
 }
 
+int seleccionarMarcha(char marcha)
+{
+  int v = 0;
+  switch(marcha)
+  {
+    case '1':
+        v = 50;
+        break;        
+    case '2':
+        v = 100;
+        break;        
+    case '3':
+        v = 150;
+        break;        
+    case '4':
+        v = 200;
+        break;        
+    case '5':
+        v = 250;
+        break;
+    default:
+      break;
+  }
+}
+
 void setup() {
   ordenMotores(RELEASE);
   Serial.begin(9600);
@@ -27,6 +52,8 @@ void setup() {
 
 void loop() {
   int velocidad = 127;
+  char marcha = 1;
+
   velocidadMotores(velocidad);
   
   if (Serial.available())
@@ -56,8 +83,13 @@ void loop() {
         ordenMotores(RELEASE);
         break;
       case 'v':
+      /*
         velocidad = (int)Serial.read();
         velocidadMotores(velocidad);
+        */
+         marcha = Serial.read();
+         velocidad = seleccionarMarcha(marcha);
+         velocidadMotores(velocidad);
       default:
         break;
     }
