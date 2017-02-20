@@ -3,7 +3,15 @@ import serial
 arduino = serial.Serial('/dev/ttyUSB0', 9600)
 i = 0
 
-print("Starting! a (Adelante), b (Atras), c (Close), d (Adelante y atras), r (Parar) y v (Marcha: 0, 1, 2, 3, 4, 5)")
+print("Starting!")
+print("a (Adelante)")
+print("b (Atras)")
+print("d (Locker (Adelante y atras))")
+print("c (Close)")
+print("x (Solo es un mensaje)")
+print("r (Parar)")
+print("v (Subir marcha")
+print("w (Bajar marcha")
 
 #comando
 while True:
@@ -29,14 +37,14 @@ while True:
       	if (i + 10) <= 255:
       		i = i + 10
       		print('Marcha : %d' % i)
-      	else
+      	else:
       		print('Marcha : %d' % i)
       		print('No tira mas locker')
       elif comando == 'w':
       	if (i - 10) >= 0:
       		i = i - 10
       		print('Marcha : %d' % i)
-      	else
+      	else:
       		print('Mu baja siberet')
 
 #arduino.close() #Finalizamos la comunicacion
