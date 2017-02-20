@@ -56,6 +56,7 @@ void setup() {
 void loop() {
   int velocidad = 127;
   char marcha = 1;
+  int v2 = 0;
 
   velocidadMotores(velocidad);
   
@@ -92,9 +93,13 @@ void loop() {
         velocidad = (int)Serial.read();
         velocidadMotores(velocidad);
         */
+        /*
          marcha = Serial.read(); //@FIXME consigo que leea otra vez el dato para cambiar de marcha, no se si es por culpa del python o del sketch
          velocidad = seleccionarMarcha(marcha);
          velocidadMotores(velocidad);
+         */
+         v2++;
+         velocidadMotores(v2);
       default:
         break;
     }

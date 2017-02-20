@@ -1,6 +1,7 @@
 import serial
 
 arduino = serial.Serial('/dev/ttyUSB0', 9600)
+i = 0
 
 print("Starting! a (Adelante), b (Atras), c (Close), d (Adelante y atras), r (Parar) y v (Marcha: 0, 1, 2, 3, 4, 5)")
 
@@ -23,7 +24,8 @@ while True:
       elif comando == 'r':
       	print('Pues me paro')
       elif comando == 'v':
-      	velocidad = raw_input('Introduce un velocidad: ')
-      	arduino.write(velocidad)
+      	#velocidad = raw_input('Introduce un velocidad: ')
+      	#arduino.write(velocidad)
+      	print('Marcha : %d' % i)
 
 #arduino.close() #Finalizamos la comunicacion
