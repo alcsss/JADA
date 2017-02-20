@@ -26,6 +26,17 @@ while True:
       elif comando == 'v':
       	#velocidad = raw_input('Introduce un velocidad: ')
       	#arduino.write(velocidad)
-      	print('Marcha : %d' % i)
+      	if (i + 10) <= 255:
+      		i = i + 10
+      		print('Marcha : %d' % i)
+      	else
+      		print('Marcha : %d' % i)
+      		print('No tira mas locker')
+      elif comando == 'w':
+      	if (i - 10) >= 0:
+      		i = i - 10
+      		print('Marcha : %d' % i)
+      	else
+      		print('Mu baja siberet')
 
 #arduino.close() #Finalizamos la comunicacion

@@ -98,8 +98,21 @@ void loop() {
          velocidad = seleccionarMarcha(marcha);
          velocidadMotores(velocidad);
          */
-         v2++;
+         if((v2 + 10) <= 255)
+         {
+          v2 = v2 + 10;
+         }
+         
          velocidadMotores(v2);
+         break;
+       case 'w':
+         if((v2 - 10) >= 0)
+         {
+          v2 = v2 - 10;
+         }
+         velocidadMotores(v2);
+         break;
+         
       default:
         break;
     }
