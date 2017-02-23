@@ -17,7 +17,7 @@ sudo usermod -a -G dialout pi
 # 
 
 # Descargar el repositorio desde GitHub
-git clone https://github.com/alcss/nerv
+git clone https://github.com/alcsss/nerv
 
 # Crear los enlaces a los archivos 
 # cd /home/pi/
