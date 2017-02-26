@@ -1,20 +1,18 @@
 # Nos situamos en la carpeta del usuario pi
 cd /home/pi/
 
-# Crear archivo de configuracion con variables
-touch config.cfg
-#nombre, tipo de arduino,  
+# Crear archivo de configuracion con variables (nombre, tipo de arduino) para que las usen otros scripts
+# touch config.cfg  
 
 
 # Actualizar la raspberry e instalar los programas necesarios
 sudo apt-get update -y
-sudo apt-get install -y python-serial samba lighttpd git python3 arduino-core arduino-mk
+sudo apt-get install -y python-serial samba lighttpd git python3 arduino-core arduino-mk screen
 
 # Otorgar permisos necesarios para cargar sketch
 sudo usermod -a -G dialout pi
 
-# copiar los archivos de configuracion por defecto si fuese necesario // cp . 
-# 
+# copiar los archivos de configuracion por defecto si fuese necesario // cp .
 
 # Descargar el repositorio desde GitHub
 git clone https://github.com/alcsss/nerv
