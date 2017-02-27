@@ -1,7 +1,9 @@
 # Actualizar repositorio
 cd /home/pi/nerv
-git pull
-cd /home/pi
+sudo git pull
+cd
 
 # Cargar el sketch en el arduino
-make upload
+cd /home/pi/nerv/arduino
+platformio run -t upload
+cd 
