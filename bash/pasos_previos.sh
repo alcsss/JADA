@@ -15,6 +15,8 @@ python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/
 sudo usermod -a -G dialout pi
 
 # copiar los archivos de configuracion por defecto si fuese necesario // cp .
+# lighttpd
+
 
 # Descargar el repositorio desde GitHub
 git clone https://github.com/alcsss/nerv
