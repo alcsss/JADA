@@ -24,6 +24,9 @@ ln -s ./nerv/bash/mant.sh mant.sh
 ln -s ./nerv/python/prueba.py prueba.py
 ls -l 
 
+# Ejecutar script de mantenimiento
+sudo bash ./mant.sh
+
 echo "---------------- Instalacion realizada ----------------"
 echo "En la primera carga de sketch se instalaran archivos necesarios"
 echo "Reinicie para asegurarse de que las configuraciones se cargan correctamente"
