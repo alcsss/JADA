@@ -10,6 +10,8 @@
 	
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="estilos/css.css" media="all"/>
+	<script type="text/javascript" src="js/codigo.js"></script>
+
 	
 	<!-- Fuentes -->
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -34,7 +36,7 @@
 	
 	<!-- Introducción texto -->
 	<div  style="float:right;" id="intextosonido";>
-		<button class="botonmenu"><p>TEXTO </p></button>
+		<button  class="botonmenu"><p>TEXTO </p></button>
 	
 	</div>
 
@@ -55,12 +57,16 @@
 	
 	<!-- Controles -->
 		<div id="controles" style="border:1px solid white;"> 
+				<button type="button"   onclick="funcionboton()" id="ebotona"class="botonalante"> <IMG src="imagenes/flecharriba.png" width=70 height=80/>
+				<button type="button" id="ebotonf" class="botonatras"> <IMG src="imagenes/flechabajo.png" width=70 height=80/>
 			
 			
 		</div>
 		
 		<!-- sensores y alarmas -->
-		<div id="sensores" 	style="border:1px solid white;">Sensores y alarmas </div>
+		<div id="sensores" 	style="border:1px solid white;">Sensores y alarmas 
+		<p id="bo">No funciona el bóton</p>
+		</div>
 				
 	</div>	
 		
