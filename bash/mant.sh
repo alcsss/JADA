@@ -13,9 +13,10 @@ sudo find /var/www/html/ -type f -exec chmod 644 {} \; && sudo find /var/www/htm
 sudo service lighttpd restart
 
 # Cargar el sketch en el arduino // Usar variable $1 para cargarlo
-if [ $1 = "a" ];
-	then
+if [ $1 = "a" ]; then
 		sudo platformio run -t upload -d ./nerv/arduino/
+	else
+		echo "No se cargará el sketch en el arduino"
 fi
 
 echo " -- Mantenimiento finalizado -- "
